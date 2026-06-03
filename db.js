@@ -1,5 +1,5 @@
 const DB = {
-  "version": 1780503566,
+  "version": 1780503743,
   "accounts": [
     {
       "id": "acc_santander",
@@ -69,37 +69,97 @@ const DB = {
       "date": "2026-06-03",
       "category": "outros_rec",
       "accountId": "acc_santander",
-      "note": "Receita não recorrente"
+      "note": "Receita única"
     },
     {
-      "id": "tenis_erik_jul",
-      "type": "expense",
-      "description": "Tênis Erik",
-      "amount": 20.99,
-      "date": "2026-07-03",
-      "category": "vestuario",
-      "accountId": "card_inter",
-      "note": "Fatura Julho"
-    },
-    {
-      "id": "curso_erik_jul",
+      "id": "curso_p6",
       "type": "expense",
       "description": "Curso Erik (6/12)",
       "amount": 99.7,
-      "date": "2026-07-03",
+      "date": "2027-07-10",
       "category": "educacao",
-      "accountId": "card_inter",
-      "note": "Fatura Julho"
+      "accountId": "card_inter"
     },
     {
-      "id": "carro_erik_jul",
+      "id": "curso_p7",
       "type": "expense",
-      "description": "Conserto do carro (3/4)",
+      "description": "Curso Erik (7/12)",
+      "amount": 99.7,
+      "date": "2027-08-10",
+      "category": "educacao",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "curso_p8",
+      "type": "expense",
+      "description": "Curso Erik (8/12)",
+      "amount": 99.7,
+      "date": "2027-09-10",
+      "category": "educacao",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "curso_p9",
+      "type": "expense",
+      "description": "Curso Erik (9/12)",
+      "amount": 99.7,
+      "date": "2027-10-10",
+      "category": "educacao",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "curso_p10",
+      "type": "expense",
+      "description": "Curso Erik (10/12)",
+      "amount": 99.7,
+      "date": "2027-11-10",
+      "category": "educacao",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "curso_p11",
+      "type": "expense",
+      "description": "Curso Erik (11/12)",
+      "amount": 99.7,
+      "date": "2027-12-10",
+      "category": "educacao",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "curso_p12",
+      "type": "expense",
+      "description": "Curso Erik (12/12)",
+      "amount": 99.7,
+      "date": "2027-01-10",
+      "category": "educacao",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "carro_p3",
+      "type": "expense",
+      "description": "Conserto Carro (3/4)",
       "amount": 748.88,
-      "date": "2026-07-03",
+      "date": "2026-07-10",
       "category": "transporte",
-      "accountId": "card_inter",
-      "note": "Fatura Julho"
+      "accountId": "card_inter"
+    },
+    {
+      "id": "carro_p4",
+      "type": "expense",
+      "description": "Conserto Carro (4/4)",
+      "amount": 748.88,
+      "date": "2026-08-10",
+      "category": "transporte",
+      "accountId": "card_inter"
+    },
+    {
+      "id": "tenis_jul",
+      "type": "expense",
+      "description": "Tênis Erik",
+      "amount": 20.99,
+      "date": "2026-07-10",
+      "category": "vestuario",
+      "accountId": "card_inter"
     },
     {
       "id": "gel_p1",
@@ -323,4 +383,4 @@ const DB = {
 };
 
 localStorage.clear();
-console.log("Database updated to v" + DB.version + " - Cache cleared");
+console.log("Base atualizada v" + DB.version);
