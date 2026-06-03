@@ -605,7 +605,9 @@ const STORE = {
 };
 
 let state = {
-  transactions: STORE.get('transactions', []),
+  transactions: STORE.get('transactions', [
+    { id: 'restituicao_ana', type: 'income', description: 'Restituição IR - Ana Laura', amount: 381.64, date: new Date().toISOString().slice(0, 10), category: 'outros_rec', accountId: null, note: 'Receita não recorrente' }
+  ]),
   accounts: STORE.get('accounts', []),
   cards: STORE.get('cards', []),
   budgets: STORE.get('budgets', []),
