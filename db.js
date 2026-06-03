@@ -1,4 +1,5 @@
 const DB = {
+  "version": 1780503566,
   "accounts": [
     {
       "id": "acc_santander",
@@ -101,251 +102,225 @@ const DB = {
       "note": "Fatura Julho"
     },
     {
-      "id": "geladeira_p1_b151",
+      "id": "gel_p1",
       "type": "expense",
       "description": "Geladeira (1/12)",
       "amount": 229.08,
       "date": "2026-07-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p1_3e84",
+      "id": "cel_p1",
       "type": "expense",
-      "description": "Celular Ana Laura (1/12)",
+      "description": "Celular Ana (1/12)",
       "amount": 191.3,
       "date": "2026-07-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p2_78d8",
+      "id": "gel_p2",
       "type": "expense",
       "description": "Geladeira (2/12)",
       "amount": 229.08,
       "date": "2026-08-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p2_fc3f",
+      "id": "cel_p2",
       "type": "expense",
-      "description": "Celular Ana Laura (2/12)",
+      "description": "Celular Ana (2/12)",
       "amount": 191.3,
       "date": "2026-08-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p3_6f8e",
+      "id": "gel_p3",
       "type": "expense",
       "description": "Geladeira (3/12)",
       "amount": 229.08,
       "date": "2026-09-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p3_301e",
+      "id": "cel_p3",
       "type": "expense",
-      "description": "Celular Ana Laura (3/12)",
+      "description": "Celular Ana (3/12)",
       "amount": 191.3,
       "date": "2026-09-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p4_3432",
+      "id": "gel_p4",
       "type": "expense",
       "description": "Geladeira (4/12)",
       "amount": 229.08,
       "date": "2026-10-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p4_6226",
+      "id": "cel_p4",
       "type": "expense",
-      "description": "Celular Ana Laura (4/12)",
+      "description": "Celular Ana (4/12)",
       "amount": 191.3,
       "date": "2026-10-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p5_5569",
+      "id": "gel_p5",
       "type": "expense",
       "description": "Geladeira (5/12)",
       "amount": 229.08,
       "date": "2026-11-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p5_d83e",
+      "id": "cel_p5",
       "type": "expense",
-      "description": "Celular Ana Laura (5/12)",
+      "description": "Celular Ana (5/12)",
       "amount": 191.3,
       "date": "2026-11-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p6_55e8",
+      "id": "gel_p6",
       "type": "expense",
       "description": "Geladeira (6/12)",
       "amount": 229.08,
       "date": "2026-12-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p6_a5ec",
+      "id": "cel_p6",
       "type": "expense",
-      "description": "Celular Ana Laura (6/12)",
+      "description": "Celular Ana (6/12)",
       "amount": 191.3,
       "date": "2026-12-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p7_a72c",
+      "id": "gel_p7",
       "type": "expense",
       "description": "Geladeira (7/12)",
       "amount": 229.08,
       "date": "2027-01-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p7_5b36",
+      "id": "cel_p7",
       "type": "expense",
-      "description": "Celular Ana Laura (7/12)",
+      "description": "Celular Ana (7/12)",
       "amount": 191.3,
       "date": "2027-01-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p8_85fa",
+      "id": "gel_p8",
       "type": "expense",
       "description": "Geladeira (8/12)",
       "amount": 229.08,
       "date": "2027-02-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p8_8f7c",
+      "id": "cel_p8",
       "type": "expense",
-      "description": "Celular Ana Laura (8/12)",
+      "description": "Celular Ana (8/12)",
       "amount": 191.3,
       "date": "2027-02-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p9_bcee",
+      "id": "gel_p9",
       "type": "expense",
       "description": "Geladeira (9/12)",
       "amount": 229.08,
       "date": "2027-03-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p9_9277",
+      "id": "cel_p9",
       "type": "expense",
-      "description": "Celular Ana Laura (9/12)",
+      "description": "Celular Ana (9/12)",
       "amount": 191.3,
       "date": "2027-03-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p10_1be8",
+      "id": "gel_p10",
       "type": "expense",
       "description": "Geladeira (10/12)",
       "amount": 229.08,
       "date": "2027-04-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p10_d3e2",
+      "id": "cel_p10",
       "type": "expense",
-      "description": "Celular Ana Laura (10/12)",
+      "description": "Celular Ana (10/12)",
       "amount": 191.3,
       "date": "2027-04-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p11_258b",
+      "id": "gel_p11",
       "type": "expense",
       "description": "Geladeira (11/12)",
       "amount": 229.08,
       "date": "2027-05-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p11_1a9c",
+      "id": "cel_p11",
       "type": "expense",
-      "description": "Celular Ana Laura (11/12)",
+      "description": "Celular Ana (11/12)",
       "amount": 191.3,
       "date": "2027-05-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "geladeira_p12_017d",
+      "id": "gel_p12",
       "type": "expense",
       "description": "Geladeira (12/12)",
       "amount": 229.08,
       "date": "2027-06-10",
       "category": "casa",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     },
     {
-      "id": "celular_ana_p12_829d",
+      "id": "cel_p12",
       "type": "expense",
-      "description": "Celular Ana Laura (12/12)",
+      "description": "Celular Ana (12/12)",
       "amount": 191.3,
       "date": "2027-06-10",
       "category": "eletronicos",
-      "accountId": "card_nubank",
-      "note": "Nubank"
+      "accountId": "card_nubank"
     }
   ],
   "investments": [],
   "budgets": []
 };
 
-if (window.location.search.includes('clean=true')) {
-  localStorage.clear();
-  window.history.replaceState({}, document.title, window.location.pathname);
-}
+localStorage.clear();
+console.log("Database updated to v" + DB.version + " - Cache cleared");
