@@ -606,40 +606,24 @@ const STORE = {
 
 let state = {
   transactions: STORE.get('transactions', [
-    { id: 'restituicao_ana', type: 'income', description: 'Restituição IR - Ana Laura', amount: 381.64, date: new Date().toISOString().slice(0, 10), category: 'outros_rec', accountId: null, note: 'Receita não recorrente' }
+    { id: 'restituicao_ana_v2', type: 'income', description: 'Restituição IR - Ana Laura', amount: 381.64, date: '2026-06-03', category: 'outros_rec', accountId: null, note: 'Receita não recorrente' }
   ]),
   accounts: STORE.get('accounts', []),
   cards: STORE.get('cards', []),
   budgets: STORE.get('budgets', []),
   investments: STORE.get('investments', []),
-  currentMonth: STORE.get('currentMonth', { year: new Date().getFullYear(), month: new Date().getMonth() }),
+  currentMonth: STORE.get('currentMonth', { year: 2026, month: 5 }),
   currentPage: 'dashboard',
 };
 
-function save() {
-  STORE.set('transactions', state.transactions);
-  STORE.set('accounts', state.accounts);
-  STORE.set('cards', state.cards);
-  STORE.set('budgets', state.budgets);
-  STORE.set('investments', state.investments);
-  STORE.set('currentMonth', state.currentMonth);
-}
-
-// Injeção forçada de dados via Assistente
-(function checkForcedData() {
+// Limpeza de cache/localStorage se necessário
+(function syncState() {
+  const currentTxs = STORE.get('transactions', []);
   const forcedId = 'restituicao_ana_v2';
-  const hasTx = state.transactions.some(t => t.id === forcedId);
-  if (!hasTx) {
-    state.transactions.push({
-      id: forcedId,
-      type: 'income',
-      description: 'Restituição IR - Ana Laura',
-      amount: 381.64,
-      date: new Date().toISOString().slice(0, 10),
-      category: 'outros_rec',
-      accountId: null,
-      note: 'Receita não recorrente (Injetada)'
-    });
+  if (!currentTxs.some(t => t.id === forcedId)) {
+    console.log('Sincronizando nova transação...');
+    const newTx = { id: forcedId, type: 'income', description: 'Restituição IR - Ana Laura', amount: 381.64, date: '2026-06-03', category: 'outros_rec', accountId: null, note: 'Receita não recorrente' };
+    state.transactions.push(newTx);
     save();
   }
 })();
