@@ -625,6 +625,25 @@ function save() {
   STORE.set('currentMonth', state.currentMonth);
 }
 
+// Injeção forçada de dados via Assistente
+(function checkForcedData() {
+  const forcedId = 'restituicao_ana_v2';
+  const hasTx = state.transactions.some(t => t.id === forcedId);
+  if (!hasTx) {
+    state.transactions.push({
+      id: forcedId,
+      type: 'income',
+      description: 'Restituição IR - Ana Laura',
+      amount: 381.64,
+      date: new Date().toISOString().slice(0, 10),
+      category: 'outros_rec',
+      accountId: null,
+      note: 'Receita não recorrente (Injetada)'
+    });
+    save();
+  }
+})();
+
 // ============================================================
 // CATEGORIES
 // ============================================================
