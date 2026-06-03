@@ -71,34 +71,34 @@ const DB = {
       "note": "Receita não recorrente"
     },
     {
-      "id": "tenis_erik",
+      "id": "tenis_erik_july",
       "type": "expense",
       "description": "Tênis Erik",
       "amount": 20.99,
-      "date": "2026-06-03",
+      "date": "2026-07-03",
       "category": "vestuario",
       "accountId": "card_inter",
-      "note": "Inter Gold"
+      "note": "Compra em 03/06 - Fatura Julho"
     },
     {
-      "id": "curso_erik",
+      "id": "curso_erik_july",
       "type": "expense",
       "description": "Curso Erik (6/12)",
       "amount": 99.7,
-      "date": "2026-06-03",
+      "date": "2026-07-03",
       "category": "educacao",
       "accountId": "card_inter",
-      "note": "Inter Gold"
+      "note": "Compra em 03/06 - Fatura Julho"
     },
     {
-      "id": "carro_erik",
+      "id": "carro_erik_july",
       "type": "expense",
       "description": "Conserto do carro (3/4)",
       "amount": 748.88,
-      "date": "2026-06-03",
+      "date": "2026-07-03",
       "category": "transporte",
       "accountId": "card_inter",
-      "note": "Inter Gold"
+      "note": "Compra em 03/06 - Fatura Julho"
     }
   ],
   "investments": [],
