@@ -893,7 +893,7 @@ function renderDashboard() {
     </div>
 
     <div class="grid grid-2" style="margin-bottom:20px;">
-      <div class="card col-span-2">
+      <div class="card">
         <div class="section-header">
           <div class="section-title">Receitas vs Despesas</div>
           <div style="font-size:12px;color:var(--text2)">Últimos 6 meses</div>
@@ -914,6 +914,40 @@ function renderDashboard() {
         <div class="chart-legend">
           <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Receitas</div>
           <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Despesas</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">Distribuição de Patrimônio</div>
+        </div>
+        <div class="donut-wrap">
+          <svg class="donut-svg" width="140" height="140" viewBox="0 0 140 140">
+            <circle cx="70" cy="70" r="54" fill="none" stroke="#2e3450" stroke-width="14"/>
+            ${(() => {
+              const total = assets + invTotal;
+              if (total === 0) return '';
+              const r2=54, cx2=70, cy2=70, circ2=2*Math.PI*r2;
+              const pAcc = assets/total, pInv = invTotal/total;
+              return `
+                <circle cx="${cx2}" cy="${cy2}" r="${r2}" fill="none" stroke="var(--green)" stroke-width="14" stroke-dasharray="${(pAcc*circ2).toFixed(1)} ${(circ2-pAcc*circ2).toFixed(1)}" stroke-dashoffset="0" transform="rotate(-90 ${cx2} ${cy2})"/>
+                <circle cx="${cx2}" cy="${cy2}" r="${r2}" fill="none" stroke="var(--blue)" stroke-width="14" stroke-dasharray="${(pInv*circ2).toFixed(1)} ${(circ2-pInv*circ2).toFixed(1)}" stroke-dashoffset="${(-pAcc*circ2).toFixed(1)}" transform="rotate(-90 ${cx2} ${cy2})"/>
+              `;
+            })()}
+          </svg>
+          <div class="donut-legend">
+            <div class="donut-item">
+              <div class="donut-dot" style="background:var(--green)"></div>
+              <div class="donut-name">Contas</div>
+              <div class="donut-pct">${assets+invTotal>0?Math.round(assets/(assets+invTotal)*100):0}%</div>
+              <div class="donut-val">${formatCurrency(assets)}</div>
+            </div>
+            <div class="donut-item">
+              <div class="donut-dot" style="background:var(--blue)"></div>
+              <div class="donut-name">Investimentos</div>
+              <div class="donut-pct">${assets+invTotal>0?Math.round(invTotal/(assets+invTotal)*100):0}%</div>
+              <div class="donut-val">${formatCurrency(invTotal)}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
