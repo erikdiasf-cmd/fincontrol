@@ -17,3 +17,9 @@ const DB = {
   investments: [],
   budgets: []
 };
+
+// Auto-clean localStorage if requested via URL
+if (window.location.search.includes('clean=true')) {
+  Object.keys(localStorage).filter(k => k.startsWith('fc_')).forEach(k => localStorage.removeItem(k));
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
