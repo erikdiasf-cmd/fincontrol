@@ -595,7 +595,12 @@
   </div>
 </div>
 
-<script src="db.js"></script>
+<script>
+  // Carrega db.js sempre ignorando o cache
+  const script = document.createElement('script');
+  script.src = 'db.js?v=' + Date.now();
+  document.head.appendChild(script);
+</script>
 <script>
 // ============================================================
 // DATA LAYER — Sincronização com GitHub (db.js) + localStorage
