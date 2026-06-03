@@ -71,7 +71,7 @@ const DB = {
       "note": "Receita não recorrente"
     },
     {
-      "id": "tenis_erik_july",
+      "id": "tenis_erik_jul",
       "type": "expense",
       "description": "Tênis Erik",
       "amount": 20.99,
@@ -81,7 +81,7 @@ const DB = {
       "note": "Fatura Julho"
     },
     {
-      "id": "curso_erik_july",
+      "id": "curso_erik_jul",
       "type": "expense",
       "description": "Curso Erik (6/12)",
       "amount": 99.7,
@@ -91,7 +91,7 @@ const DB = {
       "note": "Fatura Julho"
     },
     {
-      "id": "carro_erik_july",
+      "id": "carro_erik_jul",
       "type": "expense",
       "description": "Conserto do carro (3/4)",
       "amount": 748.88,
