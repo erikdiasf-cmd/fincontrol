@@ -596,10 +596,15 @@
 </div>
 
 <script>
-  // Carrega db.js sempre ignorando o cache
-  const script = document.createElement('script');
-  script.src = 'db.js?v=' + Date.now();
-  document.head.appendChild(script);
+  (function() {
+    const script = document.createElement('script');
+    script.src = 'db.js?v=' + Date.now();
+    script.onload = () => {
+      console.log("DB loaded, initializing app...");
+      if (window.initApp) window.initApp();
+    };
+    document.head.appendChild(script);
+  })();
 </script>
 <script>
 // ============================================================
