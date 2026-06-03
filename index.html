@@ -595,38 +595,52 @@
   </div>
 </div>
 
+<script src="db.js"></script>
 <script>
 // ============================================================
-// DATA LAYER — localStorage persistence
+// DATA LAYER — Sincronização com GitHub (db.js) + localStorage
 // ============================================================
 const STORE = {
   get: (k, def) => { try { const v = localStorage.getItem('fc_'+k); return v ? JSON.parse(v) : def; } catch { return def; } },
   set: (k, v) => localStorage.setItem('fc_'+k, JSON.stringify(v)),
 };
 
-let state = {
-  transactions: STORE.get('transactions', [
-    { id: 'restituicao_ana_v2', type: 'income', description: 'Restituição IR - Ana Laura', amount: 381.64, date: '2026-06-03', category: 'outros_rec', accountId: null, note: 'Receita não recorrente' }
-  ]),
-  accounts: STORE.get('accounts', []),
-  cards: STORE.get('cards', []),
-  budgets: STORE.get('budgets', []),
-  investments: STORE.get('investments', []),
-  currentMonth: STORE.get('currentMonth', { year: 2026, month: 5 }),
-  currentPage: 'dashboard',
-};
+// Se db.js falhar em carregar, cria um DB vazio
+if (typeof DB === 'undefined') {
+  window.DB = { accounts: [], cards: [], transactions: [], investments: [], budgets: [] };
+}
 
-// Limpeza de cache/localStorage se necessário
-(function syncState() {
-  const currentTxs = STORE.get('transactions', []);
-  const forcedId = 'restituicao_ana_v2';
-  if (!currentTxs.some(t => t.id === forcedId)) {
-    console.log('Sincronizando nova transação...');
-    const newTx = { id: forcedId, type: 'income', description: 'Restituição IR - Ana Laura', amount: 381.64, date: '2026-06-03', category: 'outros_rec', accountId: null, note: 'Receita não recorrente' };
-    state.transactions.push(newTx);
-    save();
-  }
-})();
+function getInitialState() {
+  const localTxs = STORE.get('transactions', []);
+  const transactions = [...DB.transactions];
+  
+  // Mescla transações do GitHub com as locais (evita duplicados por ID)
+  localTxs.forEach(tx => {
+    if (!transactions.some(t => t.id === tx.id)) transactions.push(tx);
+  });
+
+  return {
+    transactions,
+    accounts: DB.accounts.length > 0 ? DB.accounts : STORE.get('accounts', []),
+    cards: DB.cards.length > 0 ? DB.cards : STORE.get('cards', []),
+    investments: DB.investments.length > 0 ? DB.investments : STORE.get('investments', []),
+    budgets: DB.budgets.length > 0 ? DB.budgets : STORE.get('budgets', []),
+    currentMonth: STORE.get('currentMonth', { year: 2026, month: 5 }), // Junho
+    currentPage: 'dashboard',
+  };
+}
+
+let state = getInitialState();
+
+function save() {
+  STORE.set('transactions', state.transactions);
+  STORE.set('accounts', state.accounts);
+  STORE.set('cards', state.cards);
+  STORE.set('investments', state.investments);
+  STORE.set('budgets', state.budgets);
+  STORE.set('currentMonth', state.currentMonth);
+}
+
 
 // ============================================================
 // CATEGORIES
