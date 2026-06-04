@@ -1048,7 +1048,7 @@
 };</script>
 <script>
 // ============================================================
-// DATA LAYER — Sincronização com GitHub (db.js) + localStorage
+// DATA LAYER  — Sincronização com GitHub (db.js) + localStorage
 // ============================================================
 const STORE = {
   get: (k, def) => { try { const v = localStorage.getItem('fc_'+k); return v ? JSON.parse(v) : def; } catch { return def; } },
