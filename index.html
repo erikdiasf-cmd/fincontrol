@@ -535,6 +535,10 @@
           <label class="form-label">Instituição</label>
           <input class="form-input" id="invInstitution" placeholder="Ex: XP, Inter, Nubank...">
         </div>
+        <div class="form-group">
+          <label class="form-label">CNPJ (para atualização automática)</label>
+          <input class="form-input" id="invCnpj" placeholder="00.000.000/0001-00">
+        </div>
       </div>
       <div class="form-row">
         <div class="form-group">
@@ -1644,6 +1648,7 @@ function saveInvestment() {
   const name=document.getElementById('invName').value.trim();
   const type=document.getElementById('invType').value;
   const institution=document.getElementById('invInstitution').value.trim();
+  const cnpj=document.getElementById('invCnpj').value.trim();
   const cost=parseFloat(document.getElementById('invCost').value)||0;
   const currentValue=parseFloat(document.getElementById('invValue').value)||cost;
   const date=document.getElementById('invDate').value;
@@ -1651,7 +1656,7 @@ function saveInvestment() {
   const rate=document.getElementById('invRate').value.trim();
   const note=document.getElementById('invNote').value.trim();
   if(!name||!cost) return;
-  state.investments.push({id:uid(),name,type,institution,cost,currentValue,date,maturity,rate,note});
+  state.investments.push({id:uid(),name,type,institution,cnpj,cost,currentValue,date,maturity,rate,note});
   save(); closeModal('investModal'); renderPage();
 }
 function deleteInvestment(id) { state.investments=state.investments.filter(i=>i.id!==id); save(); renderPage(); }
